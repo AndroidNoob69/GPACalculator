@@ -23,3 +23,9 @@ Logcat: (paste it on pastebin)
 
 **Pull Requests**
 You want to make improvements? Great! Open up a pull request and state clearly in the commit what your change does. I will then review and if it is deemed fit, it will be merged.
+
+**TO-DO**
+Auto-Update
+About Screen
+Changelog Screen
+Ability to select calculation type
