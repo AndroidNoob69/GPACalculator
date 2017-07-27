@@ -22,6 +22,10 @@
         <activity
             android:name=".GPA"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".About"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>

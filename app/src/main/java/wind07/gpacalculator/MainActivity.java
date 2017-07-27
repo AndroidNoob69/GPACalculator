@@ -6,6 +6,8 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -42,6 +44,23 @@ public class MainActivity extends AppCompatActivity {
             modCount = 0;
         }
         lblModCount.setText(Integer.toString(modCount));
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_about: {
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
+                break;
+            }
+            // case blocks for other MenuItems (if any)
+        }
+        return false;
     }
     public void onAddModuleClick(View view){
         String modName = txtModName.getText().toString().trim();
