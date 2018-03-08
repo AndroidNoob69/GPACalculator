@@ -25,7 +25,7 @@
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:layout_marginTop="35dp"
-        android:text="GPA Calculator is an application made by Year 2 Infocomm Technology student, Carlsen, from Ngee Ann Polytechnic."
+        android:text="GPA Calculator is an application made by a Year 3 Infocomm Technology student from Ngee Ann Polytechnic."
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"

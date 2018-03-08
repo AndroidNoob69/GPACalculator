@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             txtCredUnits.setError("Credit Units CANNOT be empty");
             validation = 0;
         }
-        if(credUnits < 1 || credUnits>22){
+        if(credUnits < 1 || credUnits>35){
             txtCredUnits.setError("Credit Units is INVALID! Please check");
             validation = 0;
         }
