@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "wind07.gpacalculator"
         minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 8
+        targetSdkVersion 27
+        versionCode 9
         versionName "1.0.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -23,7 +23,7 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:appcompat-v7:26.+'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
 }
