@@ -55,18 +55,8 @@ public class ViewModules extends AppCompatActivity {
             linearLayout.addView(grade);
             linearLayout.addView(blank);
         }
-        /*LinearLayout row = new LinearLayout(this);
-        row.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-        Button btnTag = new Button(this);
-        btnTag.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-        btnTag.setText("Remove Module");
-        btnTag.setTag("btnRemove");
-        row.addView(btnTag);
-        linearLayout.addView(row);
-        btnTag.setOnClickListener(this);*/
-
-
     }
+
     public void removeModule(View view){
         int validation = 1;
         int removeMod = 0;
