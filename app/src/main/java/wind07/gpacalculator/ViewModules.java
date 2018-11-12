@@ -61,7 +61,7 @@ public class ViewModules extends AppCompatActivity {
         int validation = 1;
         int removeMod = 0;
         txtRemoveMod = (EditText)findViewById(R.id.txtRemoveMod);
-        if (txtRemoveMod == null || txtRemoveMod.length() == 0 || txtRemoveMod.equals("")){
+        if (txtRemoveMod == null || txtRemoveMod.length() == 0){
             txtRemoveMod.setError("Module Name CANNOT be empty");
             return;
         }
@@ -76,7 +76,7 @@ public class ViewModules extends AppCompatActivity {
         }
         if (removeMod < 0 || removeMod >= modList.size()){
             txtRemoveMod.setError("Invalid ID");
-            return;
+            //return;
         }
         else {
             modList.remove(removeMod);
