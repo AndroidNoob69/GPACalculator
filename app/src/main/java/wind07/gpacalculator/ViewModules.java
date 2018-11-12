@@ -76,7 +76,6 @@ public class ViewModules extends AppCompatActivity {
         }
         if (removeMod < 0 || removeMod >= modList.size()){
             txtRemoveMod.setError("Invalid ID");
-            //return;
         }
         else {
             modList.remove(removeMod);
