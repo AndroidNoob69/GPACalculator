@@ -4,9 +4,9 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "wind07.gpacalculator"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
-        versionCode 12
+        versionCode 13
         versionName "1.0.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

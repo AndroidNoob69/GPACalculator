@@ -39,10 +39,10 @@ public class ViewModules extends AppCompatActivity {
             TextView credUnits = new TextView(this);
             TextView grade = new TextView(this);
             TextView blank = new TextView(this);
-            modCount.setTextColor(Color.rgb(0,0,0));
-            modName.setTextColor(Color.rgb(0,0,0));
-            grade.setTextColor(Color.rgb(0,0,0));
-            credUnits.setTextColor(Color.rgb(0,0,0));
+            //modCount.setTextColor(Color.rgb(0,0,0));
+            //modName.setTextColor(Color.rgb(0,0,0));
+            //grade.setTextColor(Color.rgb(0,0,0));
+            //credUnits.setTextColor(Color.rgb(0,0,0));
 
             modCount.setText("Module " + Integer.toString(i+1));
             modName.setText("Name: " + modList.get(i).modName);
