@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:text="About GPA Calculator"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textAppearance="@android:style/TextAppearance.Material"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -25,7 +24,7 @@
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:layout_marginTop="35dp"
-        android:text="GPA Calculator is an application made by a Year 3 Infocomm Technology student from Ngee Ann Polytechnic."
+        android:text="GPA Calculator is an application made by an Infocomm Technology alumni from Ngee Ann Polytechnic."
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,28 +44,16 @@
         app:layout_constraintHorizontal_bias="0.509" />
 
     <TextView
-        android:id="@+id/lblAboutMessage3"
+        android:id="@+id/lblAboutMessage4"
         android:layout_width="329dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="15dp"
-        android:text="I have no experience in Android Application development prior to creating this app. There are bound to be glitches, I believe mainly in the User Interface."
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:text="This application is deprecated"
         android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblAboutMessage2" />
-
-    <TextView
-        android:id="@+id/lblAboutMessage4"
-        android:layout_width="322dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="15dp"
-        android:text="I try to resolve these glitches time to time, when I have free time and also try to add new features on top of the existing application."
-        android:textAlignment="center"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblAboutMessage3"
-        tools:layout_editor_absoluteY="314dp"
-        tools:layout_editor_absoluteX="37dp" />
 
     <TextView
         android:id="@+id/lblVersionName"
