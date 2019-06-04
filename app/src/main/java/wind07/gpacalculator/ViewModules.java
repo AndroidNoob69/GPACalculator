@@ -89,7 +89,9 @@ public class ViewModules extends AppCompatActivity {
             modList.remove(removeMod);
             modCount -= 1;
             finish();
+            overridePendingTransition(0, 0);
             startActivity(getIntent());
+            overridePendingTransition(0, 0);
         }
     }
 }
