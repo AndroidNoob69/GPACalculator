@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -32,6 +33,13 @@ public class ViewModules extends AppCompatActivity {
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         linearLayout = (LinearLayout)findViewById(R.id.linearLayout);
+
+        if (modCount == 0){
+            TextView msg = new TextView(this);
+            msg.setText("There are no modules added");
+            msg.setGravity(Gravity.CENTER);
+            linearLayout.addView(msg);
+        }
 
         for (int i = 0; i<modList.size(); i++){
             TextView modCount = new TextView(this);

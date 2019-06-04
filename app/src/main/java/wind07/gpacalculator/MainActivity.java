@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,8 +103,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void computeGPA(View view){
-        Intent intent = new Intent(this, GPA.class);
-        startActivity(intent);
+        if (modCount == 0){
+            Context context = getApplicationContext();
+            CharSequence text = "You have not added any modules!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else {
+            Intent intent = new Intent(this, GPA.class);
+            startActivity(intent);
+        }
     }
 
     @Override
