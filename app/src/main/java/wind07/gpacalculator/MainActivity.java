@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 // Define all crap
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         if(modList.isEmpty()) {
             modCount = 0;
         }
-        lblModCount.setText(Integer.toString(modCount));
+        lblModCount.setText(String.format(Locale.ENGLISH,"%d", modCount));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             Module newModule = new Module(modName, credUnits, grade);
             modList.add(newModule);
             modCount += 1;
-            lblModCount.setText(Integer.toString(modCount));
+            lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
             lblAddMod.setText("Module " + modName + " has been successfully added!");
             lblAddMod.setTextColor(Color.rgb(50,255,50));
             txtModName.setText("");
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         super.onResume();
-        lblModCount.setText(Integer.toString(modCount));
+        lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
     }
     @Override
     public void onBackPressed() {

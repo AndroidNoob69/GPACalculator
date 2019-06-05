@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Locale;
+
 import static wind07.gpacalculator.MainActivity.modList;
 
 public class GPA extends AppCompatActivity {
@@ -48,7 +50,7 @@ public class GPA extends AppCompatActivity {
             sumcreditpoint += modList.get(i).credUnits;
         }
         gpa = sumcredxgradepoint/sumcreditpoint;
-        String gpaRounded = String.format("%.2f", gpa);
+        String gpaRounded = String.format(Locale.ENGLISH,"%.2f", gpa);
         lblGPA.setText(gpaRounded);
 
     }

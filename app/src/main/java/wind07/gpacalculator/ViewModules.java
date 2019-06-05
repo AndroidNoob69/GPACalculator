@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 import static wind07.gpacalculator.MainActivity.modCount;
 import static wind07.gpacalculator.MainActivity.modList;
 
@@ -52,9 +54,9 @@ public class ViewModules extends AppCompatActivity {
             //grade.setTextColor(Color.rgb(0,0,0));
             //credUnits.setTextColor(Color.rgb(0,0,0));
 
-            modCount.setText("Module " + Integer.toString(i+1));
+            modCount.setText("Module " + String.format(Locale.ENGLISH,"%d",i+1));
             modName.setText("Name: " + modList.get(i).modName);
-            credUnits.setText("Credit Units: " + Double.toString(modList.get(i).credUnits));
+            credUnits.setText("Credit Units: " + String.format(Locale.ENGLISH,"%.1f",modList.get(i).credUnits));
             grade.setText("Grade: " + modList.get(i).grade);
             blank.setText("");
             linearLayout.addView(modCount);
