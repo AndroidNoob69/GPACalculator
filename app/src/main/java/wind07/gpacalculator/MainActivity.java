@@ -124,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        exitApp();
+    }
+
+    public void exitApp(){
         //Clean up code
         modList.clear();
         modCount=0;
