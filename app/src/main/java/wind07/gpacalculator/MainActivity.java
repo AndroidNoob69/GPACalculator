@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         String modName = txtModName.getText().toString().trim();
         double credUnits = 0;
         int validation = 1;
-        if (modName == null || modName.length() == 0 ){
+        if (modName.length() == 0 ){
             txtModName.setError("Module Name CANNOT be empty");
             validation = 0;
         }

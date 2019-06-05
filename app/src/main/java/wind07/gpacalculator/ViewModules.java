@@ -71,7 +71,7 @@ public class ViewModules extends AppCompatActivity {
         int validation = 1;
         int removeMod = 0;
         txtRemoveMod = (EditText)findViewById(R.id.txtRemoveMod);
-        if (txtRemoveMod == null || txtRemoveMod.length() == 0){
+        if (txtRemoveMod.length() == 0){
             txtRemoveMod.setError("Module Name CANNOT be empty");
             return;
         }
