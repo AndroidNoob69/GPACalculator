@@ -1,6 +1,8 @@
 package wind07.gpacalculator;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -124,7 +126,25 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        exitApp();
+        AlertDialog.Builder exitDialog = new AlertDialog.Builder(this);
+        exitDialog.setMessage("Do you want to exit?");
+        exitDialog.setCancelable(true);
+        exitDialog.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        exitApp();
+                    }
+                });
+        exitDialog.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog exitAlert = exitDialog.create();
+        exitAlert.show();
     }
 
     public void exitApp(){
