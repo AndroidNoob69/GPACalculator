@@ -1,10 +1,8 @@
 package wind07.gpacalculator;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import wind07.gpacalculator.BuildConfig;
 
 public class About extends AppCompatActivity {
 

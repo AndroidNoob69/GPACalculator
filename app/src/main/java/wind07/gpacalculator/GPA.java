@@ -2,12 +2,9 @@ package wind07.gpacalculator;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.icu.text.DecimalFormat;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.Locale;
 
