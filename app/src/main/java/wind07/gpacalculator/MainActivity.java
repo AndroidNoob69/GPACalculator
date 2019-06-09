@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             }
+            case R.id.action_settings: {
+                Intent intent = new Intent(this, Settings.class);
+                startActivity(intent);
+                break;
+            }
             // case blocks for other MenuItems (if any)
         }
         return false;

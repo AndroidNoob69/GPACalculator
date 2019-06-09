@@ -41,6 +41,8 @@
     <string name="about_body_2_ui">The main goal of this application is to ease the calculation of GPA, with user inputted Modules and grades.</string>
     <string name="about_body_3_ui">This application is now a side hobby of mine when I am bored</string>
 
+    <string name="settings_ui">Settings</string>
+
     <!-- Arrays -->
     <string-array name="grade_array">
         <item>AD/A+/A</item>
