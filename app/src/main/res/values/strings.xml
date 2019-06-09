@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">GPA Calculator</string>
+
+    <!-- Strings set programmatically -->
+    <string name="empty_module_name">Module Name CANNOT be empty</string>
+    <string name="empty_module_credits">Credit Units CANNOT be empty</string>
+    <string name="invalid_module_credits">Credit Units is INVALID</string>
+    <string name="module_added">Module %1$s has been successfully added!</string>
+    <string name="no_modules_added">You have not added any modules!</string>
+    <string name="exit_confirmation">Do you want to exit?</string>
+    <string name="no_modules_found">There are no modules added</string>
+    <string name="module_id">Module %1$s</string>
+    <string name="module_name">Name: %1$s</string>
+    <string name="module_credits">Credit Units: %1$s</string>
+    <string name="module_grade">Grade: %1$s</string>
+    <string name="empty_module_id">Module ID CANNOT be empty</string>
+    <string name="invalid_module_id_nfe">What a genius! You take so many modules?</string>
+    <string name="invalid_module_id">Invalid ID</string>
+
+    <string name="build_id">Build %1$s</string>
+    <string name="version_num">Version %1$s</string>
+
+    <!-- Strings set in UI -->
+    <string name="module_name_ui">Module Name</string>
+    <string name="credit_units_ui">Credit Units</string>
+    <string name="grade_ui">Grade: </string>
+    <string name="add_module_ui">Add Module</string>
+    <string name="num_of_modules_ui">Number of Module(s): </string>
+    <string name="view_added_modules_ui">View Added Modules</string>
+    <string name="compute_gpa_ui">Compute Depression</string>
+    <string name="module_id_ui">Module ID</string>
+    <string name="remove_module_ui">Remove Module</string>
+    <string name="your_gpa_is_ui">Your GPA is</string>
+    <string name="note_2dp_ui">Note: Rounded off to 2 Decimal Places</string>
+
+    <string name="about_title_ui">About GPA Calculator</string>
+    <string name="about_body_1_ui">GPA Calculator is an application made by an Infocomm Technology alumni from Ngee Ann Polytechnic.</string>
+    <string name="about_body_2_ui">The main goal of this application is to ease the calculation of GPA, with user inputted Modules and grades.</string>
+    <string name="about_body_3_ui">This application is now a side hobby of mine when I am bored</string>
+
+    <!-- Arrays -->
     <string-array name="grade_array">
         <item>AD/A+/A</item>
         <item>B+</item>

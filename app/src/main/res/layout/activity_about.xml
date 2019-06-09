@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:text="About GPA Calculator"
+        android:text="@string/about_title_ui"
         android:textAppearance="@android:style/TextAppearance.Material"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,10 +21,10 @@
 
     <TextView
         android:id="@+id/lblAboutMessage1"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
+        android:layout_width="329dp"
+        android:layout_height="54dp"
         android:layout_marginTop="35dp"
-        android:text="GPA Calculator is an application made by an Infocomm Technology alumni from Ngee Ann Polytechnic."
+        android:text="@string/about_body_1_ui"
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -35,20 +35,20 @@
         android:id="@+id/lblAboutMessage2"
         android:layout_width="329dp"
         android:layout_height="54dp"
-        android:text="The main goal of this application is to ease the calculation of GPA, with user inputted Modules and grades."
+        android:layout_marginTop="20dp"
+        android:text="@string/about_body_2_ui"
         android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/lblAboutMessage1"
-        app:layout_constraintHorizontal_bias="0.509" />
+        app:layout_constraintTop_toBottomOf="@+id/lblAboutMessage1" />
 
     <TextView
         android:id="@+id/lblAboutMessage4"
         android:layout_width="329dp"
         android:layout_height="54dp"
         android:layout_marginTop="20dp"
-        android:text="This application is deprecated"
+        android:text="@string/about_body_3_ui"
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"

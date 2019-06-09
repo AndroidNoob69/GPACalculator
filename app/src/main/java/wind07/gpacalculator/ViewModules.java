@@ -34,7 +34,7 @@ public class ViewModules extends AppCompatActivity {
 
         if (modCount == 0){
             TextView msg = new TextView(this);
-            msg.setText("There are no modules added");
+            msg.setText(getString(R.string.no_modules_added));
             msg.setGravity(Gravity.CENTER);
             linearLayout.addView(msg);
         }
@@ -50,10 +50,15 @@ public class ViewModules extends AppCompatActivity {
             //grade.setTextColor(Color.rgb(0,0,0));
             //credUnits.setTextColor(Color.rgb(0,0,0));
 
-            modCount.setText("Module " + String.format(Locale.ENGLISH,"%d",i+1));
-            modName.setText("Name: " + modList.get(i).modName);
-            credUnits.setText("Credit Units: " + String.format(Locale.ENGLISH,"%.1f",modList.get(i).credUnits));
-            grade.setText("Grade: " + modList.get(i).grade);
+            String dispModID = String.format(Locale.ENGLISH,"%d",i+1);
+            String dispModName = modList.get(i).modName;
+            String dispModCred = String.format(Locale.ENGLISH,"%.1f",modList.get(i).credUnits);
+            String dispGrade = modList.get(i).grade;
+
+            modCount.setText(getString(R.string.module_id, dispModID));
+            modName.setText(getString(R.string.module_name, dispModName));
+            credUnits.setText(getString(R.string.module_credits, dispModCred));
+            grade.setText(getString(R.string.module_grade, dispGrade));
             blank.setText("");
             linearLayout.addView(modCount);
             linearLayout.addView(modName);
@@ -68,7 +73,7 @@ public class ViewModules extends AppCompatActivity {
         int removeMod = 0;
         txtRemoveMod = (EditText)findViewById(R.id.txtRemoveMod);
         if (txtRemoveMod.length() == 0){
-            txtRemoveMod.setError("Module Name CANNOT be empty");
+            txtRemoveMod.setError(getString(R.string.empty_module_id));
             return;
         }
         while (true) {
@@ -76,12 +81,12 @@ public class ViewModules extends AppCompatActivity {
                 removeMod = (Integer.parseInt(txtRemoveMod.getText().toString())) - 1;
                 break;
             } catch (NumberFormatException nfe) {
-                txtRemoveMod.setError("What a genius! You take so many modules?");
+                txtRemoveMod.setError(getString(R.string.invalid_module_id_nfe));
                 return;
             }
         }
         if (removeMod < 0 || removeMod >= modList.size()){
-            txtRemoveMod.setError("Invalid ID");
+            txtRemoveMod.setError(getString(R.string.invalid_module_id));
         }
         else {
             modList.remove(removeMod);

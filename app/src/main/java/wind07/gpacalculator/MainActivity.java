@@ -70,18 +70,18 @@ public class MainActivity extends AppCompatActivity {
         double credUnits = 0;
         int validation = 1;
         if (modName.length() == 0 ){
-            txtModName.setError("Module Name CANNOT be empty");
+            txtModName.setError(getString(R.string.empty_module_name));
             validation = 0;
         }
         try {
             credUnits = Double.parseDouble(txtCredUnits.getText().toString());
         }
         catch(NumberFormatException nfe){
-            txtCredUnits.setError("Credit Units CANNOT be empty");
+            txtCredUnits.setError(getString(R.string.empty_module_credits));
             validation = 0;
         }
         if(credUnits < 1 || credUnits>35){
-            txtCredUnits.setError("Credit Units is INVALID! Please check");
+            txtCredUnits.setError(getString(R.string.invalid_module_credits));
             validation = 0;
         }
         if(validation == 0){
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             modList.add(newModule);
             modCount += 1;
             lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
-            lblAddMod.setText("Module " + modName + " has been successfully added!");
+            lblAddMod.setText(getString(R.string.module_added, modName));
             lblAddMod.setTextColor(Color.rgb(50,255,50));
             txtModName.setText("");
             txtCredUnits.setText("");
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     public void computeGPA(View view){
         if (modCount == 0){
             Context context = getApplicationContext();
-            CharSequence text = "You have not added any modules!";
+            CharSequence text = getString(R.string.no_modules_added);
             int duration = Toast.LENGTH_LONG;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder exitDialog = new AlertDialog.Builder(this);
-        exitDialog.setMessage("Do you want to exit?");
+        exitDialog.setMessage(getString(R.string.exit_confirmation));
         exitDialog.setCancelable(true);
         exitDialog.setPositiveButton(
                 "Yes",

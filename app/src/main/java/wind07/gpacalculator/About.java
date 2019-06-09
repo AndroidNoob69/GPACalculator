@@ -10,10 +10,12 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        String buildID = Integer.toString(BuildConfig.VERSION_CODE);
+        String verionNum = BuildConfig.VERSION_NAME;;
         TextView lblVersionCode = (TextView) findViewById(R.id.lblVersionCode);
         TextView lblVersionName = (TextView) findViewById(R.id.lblVersionName);
-        String versionCode = "Build " + Integer.toString(BuildConfig.VERSION_CODE);
-        String versionName = "Version " + BuildConfig.VERSION_NAME;
+        String versionCode = getString(R.string.build_id, buildID);
+        String versionName = getString(R.string.version_num, verionNum);
         lblVersionCode.setText(versionCode);
         lblVersionName.setText(versionName);
     }
