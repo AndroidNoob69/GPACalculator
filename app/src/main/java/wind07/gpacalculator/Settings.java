@@ -34,13 +34,11 @@ public class Settings extends AppCompatActivity {
                     swDarkMode.setChecked(false);
             }
         }
-        else{
-            if (darkTheme.equals("true")){
-                swDarkMode.setChecked(true);
-            }
-            else{
-                swDarkMode.setChecked(false);
-            }
+        else if (darkTheme.equals("true")) {
+            swDarkMode.setChecked(true);
+        }
+        else {
+            swDarkMode.setChecked(false);
         }
 
         swDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

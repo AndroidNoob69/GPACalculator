@@ -41,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         String darkTheme = settings.getString("dark_theme", "");
-        if (darkTheme.equals("true")){
+        if (darkTheme.isEmpty()) {
+            return;
+        }
+        else if (darkTheme.equals("true")){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         else{
