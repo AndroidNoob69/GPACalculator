@@ -22,23 +22,26 @@ public class Settings extends AppCompatActivity {
 
         String darkTheme = settings.getString("dark_theme", "");
 
-        if (darkTheme.isEmpty()) {
+        if (darkTheme.equals("true")) {
+            swDarkMode.setChecked(true);
+        }
+        else if (darkTheme.equals("false")) {
+            swDarkMode.setChecked(false);
+        }
+        else {
             int currentNightMode = getResources().getConfiguration().uiMode
                     & Configuration.UI_MODE_NIGHT_MASK;
             switch (currentNightMode) {
                 case Configuration.UI_MODE_NIGHT_NO:
                     swDarkMode.setChecked(false);
+                    break;
                 case Configuration.UI_MODE_NIGHT_YES:
                     swDarkMode.setChecked(true);
+                    break;
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
                     swDarkMode.setChecked(false);
+                    break;
             }
-        }
-        else if (darkTheme.equals("true")) {
-            swDarkMode.setChecked(true);
-        }
-        else {
-            swDarkMode.setChecked(false);
         }
 
         swDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
