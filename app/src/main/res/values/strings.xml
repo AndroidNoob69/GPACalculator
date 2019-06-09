@@ -16,6 +16,8 @@
     <string name="empty_module_id">Module ID CANNOT be empty</string>
     <string name="invalid_module_id_nfe">What a genius! You take so many modules?</string>
     <string name="invalid_module_id">Invalid ID</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="build_id">Build %1$s</string>
     <string name="version_num">Version %1$s</string>

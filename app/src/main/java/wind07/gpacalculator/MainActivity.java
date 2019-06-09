@@ -130,14 +130,14 @@ public class MainActivity extends AppCompatActivity {
         exitDialog.setMessage(getString(R.string.exit_confirmation));
         exitDialog.setCancelable(true);
         exitDialog.setPositiveButton(
-                "Yes",
+                getString(R.string.yes),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         exitApp();
                     }
                 });
         exitDialog.setNegativeButton(
-                "No",
+                getString(R.string.no),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
