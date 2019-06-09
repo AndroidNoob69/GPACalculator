@@ -35,6 +35,7 @@
     <string name="your_gpa_is_ui">Your GPA is</string>
     <string name="note_2dp_ui">Note: Rounded off to 2 Decimal Places</string>
 
+    <string name="about_ui">About</string>
     <string name="about_title_ui">About GPA Calculator</string>
     <string name="about_body_1_ui">GPA Calculator is an application made by an Infocomm Technology alumni from Ngee Ann Polytechnic.</string>
     <string name="about_body_2_ui">The main goal of this application is to ease the calculation of GPA, with user inputted Modules and grades.</string>
