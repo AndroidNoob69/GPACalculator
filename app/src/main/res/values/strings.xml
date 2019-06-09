@@ -42,6 +42,7 @@
     <string name="about_body_3_ui">This application is now a side hobby of mine when I am bored</string>
 
     <string name="settings_ui">Settings</string>
+    <string name="settings_dark_mode_ui">Dark Mode (Restart app to apply)</string>
 
     <!-- Arrays -->
     <string-array name="grade_array">
