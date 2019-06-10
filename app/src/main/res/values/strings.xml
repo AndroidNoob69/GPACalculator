@@ -8,7 +8,7 @@
     <string name="module_added">Module %1$s has been successfully added!</string>
     <string name="no_modules_added">You have not added any modules!</string>
     <string name="exit_confirmation">Do you want to exit?</string>
-    <string name="no_modules_found">There are no modules added</string>
+    <string name="no_modules_found">There are no modules found</string>
     <string name="module_id">Module %1$s</string>
     <string name="module_name">Name: %1$s</string>
     <string name="module_credits">Credit Units: %1$s</string>

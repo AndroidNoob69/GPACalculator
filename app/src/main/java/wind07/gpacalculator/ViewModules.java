@@ -34,7 +34,7 @@ public class ViewModules extends AppCompatActivity {
 
         if (modCount == 0){
             TextView msg = new TextView(this);
-            msg.setText(getString(R.string.no_modules_added));
+            msg.setText(getString(R.string.no_modules_found));
             msg.setGravity(Gravity.CENTER);
             linearLayout.addView(msg);
         }
