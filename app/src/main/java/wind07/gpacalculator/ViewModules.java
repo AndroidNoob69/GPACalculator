@@ -45,10 +45,6 @@ public class ViewModules extends AppCompatActivity {
             TextView credUnits = new TextView(this);
             TextView grade = new TextView(this);
             TextView blank = new TextView(this);
-            //modCount.setTextColor(Color.rgb(0,0,0));
-            //modName.setTextColor(Color.rgb(0,0,0));
-            //grade.setTextColor(Color.rgb(0,0,0));
-            //credUnits.setTextColor(Color.rgb(0,0,0));
 
             String dispModID = String.format(Locale.ENGLISH,"%d",i+1);
             String dispModName = modList.get(i).modName;
