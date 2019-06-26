@@ -6,8 +6,8 @@ android {
         applicationId "wind07.gpacalculator"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 15
-        versionName "1.1.1"
+        versionCode 16
+        versionName "1.1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
