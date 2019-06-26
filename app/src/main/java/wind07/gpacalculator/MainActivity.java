@@ -37,29 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        String darkTheme = settings.getString("dark_theme", "");
-        if (darkTheme.equals("true")){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
-        else if (darkTheme.equals("false")){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-
-        txtModName = (EditText)findViewById(R.id.txtModName);
-        txtCredUnits = (EditText)findViewById(R.id.txtCredUnits);
-        lblModCount = (TextView)findViewById(R.id.lblModCount);
-        lblAddMod = (TextView)findViewById((R.id.lblAddMod));
-        ddlGrade = (Spinner) findViewById(R.id.ddlGrade);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grade_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ddlGrade.setAdapter(adapter);
-        if(modList.isEmpty()) {
-            modCount = 0;
-        }
-        lblModCount.setText(String.format(Locale.ENGLISH,"%d", modCount));
+        initialise();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -163,6 +141,32 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog exitAlert = exitDialog.create();
         exitAlert.show();
+    }
+
+    public void initialise(){
+        setContentView(R.layout.activity_main);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        String darkTheme = settings.getString("dark_theme", "");
+        if (darkTheme.equals("true")){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else if (darkTheme.equals("false")){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+
+        txtModName = (EditText)findViewById(R.id.txtModName);
+        txtCredUnits = (EditText)findViewById(R.id.txtCredUnits);
+        lblModCount = (TextView)findViewById(R.id.lblModCount);
+        lblAddMod = (TextView)findViewById((R.id.lblAddMod));
+        ddlGrade = (Spinner) findViewById(R.id.ddlGrade);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grade_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ddlGrade.setAdapter(adapter);
+        if(modList.isEmpty()) {
+            modCount = 0;
+        }
+        lblModCount.setText(String.format(Locale.ENGLISH,"%d", modCount));
     }
 
     public void exitApp(){
