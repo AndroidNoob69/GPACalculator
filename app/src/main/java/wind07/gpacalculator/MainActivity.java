@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         initialise();
     }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -61,6 +68,30 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder exitDialog = new AlertDialog.Builder(this);
+        exitDialog.setMessage(getString(R.string.exit_confirmation));
+        exitDialog.setCancelable(true);
+        exitDialog.setPositiveButton(
+                getString(R.string.yes),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        exitApp();
+                    }
+                });
+        exitDialog.setNegativeButton(
+                getString(R.string.no),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog exitAlert = exitDialog.create();
+        exitAlert.show();
+    }
+
     public void onAddModuleClick(View view){
         String modName = txtModName.getText().toString().trim();
         double credUnits = 0;
@@ -113,34 +144,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, GPA.class);
             startActivity(intent);
         }
-    }
-
-    @Override
-    public void onResume(){
-        super.onResume();
-        lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
-    }
-    @Override
-    public void onBackPressed() {
-        AlertDialog.Builder exitDialog = new AlertDialog.Builder(this);
-        exitDialog.setMessage(getString(R.string.exit_confirmation));
-        exitDialog.setCancelable(true);
-        exitDialog.setPositiveButton(
-                getString(R.string.yes),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        exitApp();
-                    }
-                });
-        exitDialog.setNegativeButton(
-                getString(R.string.no),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog exitAlert = exitDialog.create();
-        exitAlert.show();
     }
 
     public void initialise(){
