@@ -71,15 +71,14 @@ public class ViewModules extends AppCompatActivity {
             txtRemoveMod.setError(getString(R.string.empty_module_id));
             return;
         }
-        while (true) {
-            try {
-                removeMod = (Integer.parseInt(txtRemoveMod.getText().toString())) - 1;
-                break;
-            } catch (NumberFormatException nfe) {
+        try {
+            removeMod = (Integer.parseInt(txtRemoveMod.getText().toString())) - 1;
+            }
+        catch (NumberFormatException nfe) {
                 txtRemoveMod.setError(getString(R.string.invalid_module_id_nfe));
                 return;
             }
-        }
+
         if (removeMod < 0 || removeMod >= modList.size()){
             txtRemoveMod.setError(getString(R.string.invalid_module_id));
         }
