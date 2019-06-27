@@ -28,8 +28,11 @@ public class ViewModules extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_modules);
         Intent intent = getIntent();
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        populateModules();
+    }
+
+    public void populateModules(){
         linearLayout = (LinearLayout)findViewById(R.id.linearLayout);
 
         if (modCount == 0){
