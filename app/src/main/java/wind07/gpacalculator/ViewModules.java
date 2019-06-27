@@ -42,6 +42,7 @@ public class ViewModules extends AppCompatActivity {
             msg.setText(getString(R.string.no_modules_found));
             msg.setGravity(Gravity.CENTER);
             linearLayout.addView(msg);
+            return;
         }
 
         for (int i = 0; i<modList.size(); i++){
