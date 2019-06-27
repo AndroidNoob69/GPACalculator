@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wind07.gpacalculator.MainActivity">
+
+    <EditText
+        android:id="@+id/txtModName"
+        android:layout_width="334dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/module_name_ui"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCredUnits"
+        android:layout_width="195dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/credit_units_ui"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtModName" />
+
+    <Spinner
+        android:id="@+id/ddlGrade"
+        android:layout_width="165dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txtCredUnits" />
+
+    <Button
+        android:id="@+id/btnAddMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onAddModuleClick"
+        android:text="@string/add_module_ui"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddlGrade" />
+
+    <TextView
+        android:id="@+id/lblModCountMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/num_of_modules_ui"
+        android:textAppearance="@android:style/TextAppearance.Material"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblModCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="80dp"
+        android:text="0000"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintLeft_toRightOf="@+id/lblModCountMsg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="viewModules"
+        android:text="@string/view_added_modules_ui"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddMod" />
+
+    <TextView
+        android:id="@+id/lblAddMod"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:maxEms="40"
+        android:singleLine="false"
+        android:text="Placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblModCountMsg" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:onClick="computeGPA"
+        android:text="@string/compute_gpa_ui"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewMod" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/grade_ui"
+        android:textAppearance="@android:style/TextAppearance.Material"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCredUnits" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
