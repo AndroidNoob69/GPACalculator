@@ -1,5 +1,6 @@
 package wind07.gpacalculator;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 
@@ -11,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -68,30 +70,38 @@ public class ViewModules extends AppCompatActivity {
     }
 
     public void removeModule(View view){
-        int removeMod = 0;
-        txtRemoveMod = (EditText)findViewById(R.id.txtRemoveMod);
-        if (txtRemoveMod.length() == 0){
-            txtRemoveMod.setError(getString(R.string.empty_module_id));
-            return;
+        if (modCount == 0){
+            Context context = getApplicationContext();
+            CharSequence text = getString(R.string.no_modules_removable);
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
-        try {
-            removeMod = (Integer.parseInt(txtRemoveMod.getText().toString())) - 1;
+        else {
+            int removeMod = 0;
+            txtRemoveMod = (EditText) findViewById(R.id.txtRemoveMod);
+            if (txtRemoveMod.length() == 0) {
+                txtRemoveMod.setError(getString(R.string.empty_module_id));
+                return;
             }
-        catch (NumberFormatException nfe) {
+            try {
+                removeMod = (Integer.parseInt(txtRemoveMod.getText().toString())) - 1;
+            } catch (NumberFormatException nfe) {
                 txtRemoveMod.setError(getString(R.string.invalid_module_id_nfe));
                 return;
             }
 
-        if (removeMod < 0 || removeMod >= modList.size()){
-            txtRemoveMod.setError(getString(R.string.invalid_module_id));
-        }
-        else {
-            modList.remove(removeMod);
-            modCount -= 1;
-            finish();
-            overridePendingTransition(0, 0);
-            startActivity(getIntent());
-            overridePendingTransition(0, 0);
+            if (removeMod < 0 || removeMod >= modList.size()) {
+                txtRemoveMod.setError(getString(R.string.invalid_module_id));
+            } else {
+                modList.remove(removeMod);
+                modCount -= 1;
+                finish();
+                overridePendingTransition(0, 0);
+                startActivity(getIntent());
+                overridePendingTransition(0, 0);
+            }
         }
     }
 }
