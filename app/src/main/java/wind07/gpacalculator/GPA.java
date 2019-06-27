@@ -1,7 +1,5 @@
 package wind07.gpacalculator;
 
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
@@ -16,14 +14,13 @@ public class GPA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpa);
-        Intent intent = getIntent();
 
-        TextView lblGPA = (TextView) findViewById(R.id.lblGPA);
+        TextView lblGPA = findViewById(R.id.lblGPA);
 
         double gradepoint = 0.0;
         double sumcredxgradepoint = 0.0;
         double sumcreditpoint = 0.0;
-        double gpa = 0.0;
+        double gpa;
 
         for (int i = 0 ; i < modList.size() ; i++){
 

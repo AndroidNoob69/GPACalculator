@@ -1,10 +1,8 @@
 package wind07.gpacalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -19,7 +17,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 
-        Switch swDarkMode = (Switch) findViewById(R.id.switchDarkMode);
+        Switch swDarkMode = findViewById(R.id.switchDarkMode);
 
         String darkTheme = settings.getString("dark_theme", "");
 

@@ -1,8 +1,6 @@
 package wind07.gpacalculator;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,13 +27,12 @@ public class ViewModules extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_modules);
-        Intent intent = getIntent();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         populateModules();
     }
 
     public void populateModules(){
-        linearLayout = (LinearLayout)findViewById(R.id.linearLayout);
+        linearLayout = findViewById(R.id.linearLayout);
 
         if (modCount == 0){
             TextView msg = new TextView(this);
@@ -80,8 +77,8 @@ public class ViewModules extends AppCompatActivity {
             toast.show();
         }
         else {
-            int removeMod = 0;
-            txtRemoveMod = (EditText) findViewById(R.id.txtRemoveMod);
+            int removeMod;
+            txtRemoveMod = findViewById(R.id.txtRemoveMod);
             if (txtRemoveMod.length() == 0) {
                 txtRemoveMod.setError(getString(R.string.empty_module_id));
                 return;
