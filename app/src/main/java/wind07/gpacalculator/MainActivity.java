@@ -145,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void initialise(){
         setContentView(R.layout.activity_main);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         String darkTheme = settings.getString("dark_theme", "");
         if (darkTheme.equals("true")){
