@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -146,11 +145,11 @@ public class MainActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
-        txtModName = (EditText)findViewById(R.id.txtModName);
-        txtCredUnits = (EditText)findViewById(R.id.txtCredUnits);
-        lblModCount = (TextView)findViewById(R.id.lblModCount);
-        lblAddMod = (TextView)findViewById((R.id.lblAddMod));
-        ddlGrade = (Spinner) findViewById(R.id.ddlGrade);
+        txtModName = findViewById(R.id.txtModName);
+        txtCredUnits = findViewById(R.id.txtCredUnits);
+        lblModCount = findViewById(R.id.lblModCount);
+        lblAddMod = findViewById((R.id.lblAddMod));
+        ddlGrade =  findViewById(R.id.ddlGrade);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grade_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ddlGrade.setAdapter(adapter);
