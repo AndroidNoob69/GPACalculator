@@ -20,8 +20,8 @@ import static wind07.gpacalculator.MainActivity.modList;
 
 
 public class ViewModules extends AppCompatActivity {
-    private LinearLayout linearLayout;
-    private EditText txtRemoveMod;
+    LinearLayout linearLayout;
+    EditText txtRemoveMod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,6 @@ public class ViewModules extends AppCompatActivity {
     }
 
     public void removeModule(View view){
-        int validation = 1;
         int removeMod = 0;
         txtRemoveMod = (EditText)findViewById(R.id.txtRemoveMod);
         if (txtRemoveMod.length() == 0){
