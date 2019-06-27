@@ -26,22 +26,30 @@ public class GPA extends AppCompatActivity {
         double gpa = 0.0;
 
         for (int i = 0 ; i < modList.size() ; i++){
-            if (modList.get(i).grade.equals("AD/A+/A"))
-                gradepoint = 4;
-            else if (modList.get(i).grade.equals("B+"))
-                gradepoint = 3.5;
-            else if (modList.get(i).grade.equals("B"))
-                gradepoint = 3;
-            else if (modList.get(i).grade.equals("C+"))
-                gradepoint = 2.5;
-            else if (modList.get(i).grade.equals("C"))
-                gradepoint = 2;
-            else if (modList.get(i).grade.equals("D+"))
-                gradepoint = 1.5;
-            else if (modList.get(i).grade.equals("D"))
-                gradepoint = 1;
-            else if (modList.get(i).grade.equals("F"))
-                gradepoint = 0;
+
+            switch (modList.get(i).grade){
+                case "AD/A+/A":
+                    gradepoint = 4;
+                    break;
+                case "B+":
+                    gradepoint = 3.5;
+                    break;
+                case "B":
+                    gradepoint = 3;
+                    break;
+                case "C+":
+                    gradepoint = 2.5;
+                    break;
+                case "C":
+                    gradepoint = 2;
+                    break;
+                case "D+":
+                    gradepoint = 1.5;
+                    break;
+                case "F":
+                    gradepoint = 0;
+                    break;
+            }
             sumcredxgradepoint += modList.get(i).credUnits * gradepoint;
             sumcreditpoint += modList.get(i).credUnits;
         }
