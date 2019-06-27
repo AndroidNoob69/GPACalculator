@@ -12,7 +12,6 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         String buildID = Integer.toString(BuildConfig.VERSION_CODE);
         String verionNum = BuildConfig.VERSION_NAME;;
         TextView lblVersionCode = (TextView) findViewById(R.id.lblVersionCode);

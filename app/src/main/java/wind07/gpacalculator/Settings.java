@@ -17,7 +17,6 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 
         Switch swDarkMode = (Switch) findViewById(R.id.switchDarkMode);

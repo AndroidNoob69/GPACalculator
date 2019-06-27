@@ -17,7 +17,6 @@ public class GPA extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpa);
         Intent intent = getIntent();
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         TextView lblGPA = (TextView) findViewById(R.id.lblGPA);
 
