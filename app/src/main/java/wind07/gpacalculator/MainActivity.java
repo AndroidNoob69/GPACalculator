@@ -103,27 +103,16 @@ public class MainActivity extends AppCompatActivity {
         try {
             credUnits = Double.parseDouble(txtCredUnits.getText().toString());
         }
-        catch(NumberFormatException nfe){
+        catch (NumberFormatException nfe){
             txtCredUnits.setError(getString(R.string.empty_module_credits));
             validation = 0;
         }
-        if(credUnits < 1 || credUnits>35){
+        if (credUnits < 1 || credUnits>35){
             txtCredUnits.setError(getString(R.string.invalid_module_credits));
             validation = 0;
         }
-        if(validation == 0){
-            return;
-        }
-        else {
-            String grade = ddlGrade.getSelectedItem().toString();
-            Module newModule = new Module(modName, credUnits, grade);
-            modList.add(newModule);
-            modCount += 1;
-            lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
-            lblAddMod.setText(getString(R.string.module_added, modName));
-            lblAddMod.setTextColor(Color.rgb(50,255,50));
-            txtModName.setText("");
-            txtCredUnits.setText("");
+        if (validation == 1){
+            addModule(modName, credUnits);
         }
     }
     public void viewModules(View view){
@@ -169,6 +158,18 @@ public class MainActivity extends AppCompatActivity {
             modCount = 0;
         }
         lblModCount.setText(String.format(Locale.ENGLISH,"%d", modCount));
+    }
+
+    public void addModule(String modName, double credUnits){
+        String grade = ddlGrade.getSelectedItem().toString();
+        Module newModule = new Module(modName, credUnits, grade);
+        modList.add(newModule);
+        modCount += 1;
+        lblModCount.setText(String.format(Locale.ENGLISH,"%d",modCount));
+        lblAddMod.setText(getString(R.string.module_added, modName));
+        lblAddMod.setTextColor(Color.rgb(50,255,50));
+        txtModName.setText("");
+        txtCredUnits.setText("");
     }
 
     public void exitApp(){
