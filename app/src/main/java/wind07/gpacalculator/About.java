@@ -12,11 +12,11 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         String buildID = Integer.toString(BuildConfig.VERSION_CODE);
-        String verionNum = BuildConfig.VERSION_NAME;
+        String versionNum = BuildConfig.VERSION_NAME;
         TextView lblVersionCode = findViewById(R.id.lblVersionCode);
         TextView lblVersionName = findViewById(R.id.lblVersionName);
         String versionCode = getString(R.string.build_id, buildID);
-        String versionName = getString(R.string.version_num, verionNum);
+        String versionName = getString(R.string.version_num, versionNum);
         lblVersionCode.setText(versionCode);
         lblVersionName.setText(versionName);
     }
