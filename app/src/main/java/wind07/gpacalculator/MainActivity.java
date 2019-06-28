@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         initialise();
+        applySettings();
     }
 
     @Override
@@ -135,16 +137,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initialise(){
-        setContentView(R.layout.activity_main);
-        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        String darkTheme = settings.getString("dark_theme", "");
-        if (darkTheme.equals("true")){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
-        else if (darkTheme.equals("false")){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-
         txtModName = findViewById(R.id.txtModName);
         txtCredUnits = findViewById(R.id.txtCredUnits);
         lblModCount = findViewById(R.id.lblModCount);
@@ -157,6 +149,17 @@ public class MainActivity extends AppCompatActivity {
             modCount = 0;
         }
         lblModCount.setText(String.format(Locale.ENGLISH,"%d", modCount));
+    }
+
+    public void applySettings(){
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        String darkTheme = settings.getString("dark_theme", "");
+        if (darkTheme.equals("true")){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else if (darkTheme.equals("false")){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
     }
 
     public void addModule(String modName, double credUnits){
