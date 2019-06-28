@@ -68,3 +68,5 @@ fastlane/readme.md
 modules.xml
 .idea/misc.xml 
 *.ipr
+/app/debug
+/app/release
