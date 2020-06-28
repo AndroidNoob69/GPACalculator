@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gpacalculator.iml" filepath="$PROJECT_DIR$/gpacalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GPACalculator.iml" filepath="$PROJECT_DIR$/.idea/modules/GPACalculator.iml" group="GPACalculator" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="GPACalculator/app" />
     </modules>
   </component>
 </project>
