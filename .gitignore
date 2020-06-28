@@ -67,8 +67,6 @@ fastlane/readme.md
 /build/
 modules.xml
 .idea/modules.xml
-.idea/workspace.xml
-.idea/gradle.xml
 *.ipr
 /app/debug
 /app/release
